@@ -9,7 +9,11 @@ gem 'sqlite3'
 gem 'devise','1.2.rc'
 gem 'execjs'
 gem 'therubyracer'
- gem 'paperclip'
+gem 'paperclip'
+gem 'cocaine'
+gem 'aws-s3'
+gem 'aws-sdk'
+ 
 
 
 # Gems used only for assets and not required
