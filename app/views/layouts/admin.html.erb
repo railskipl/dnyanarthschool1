@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SchoolApp</title>
+
+<%= javascript_include_tag "admin" %>
+<%= csrf_meta_tags %>
+<%= javascript_include_tag "tiny_mce/tiny_mce" %>
+
+
+<script type="text/javascript">
+
+tinyMCE.init({ theme:"advanced",
+mode:"textareas",
+editor_selector : "tiny_mce"
+});
+</script>
+</head>
+<body>
+
+<%= yield %>
+		<ul class="tabs">
+<li><% if controller.controller_name == 'pages' %> <%= link_to "Pages", admin_pages_path, :class=>"active" %> <% else %> <%= link_to "Pages", admin_pages_path %> <% end %></li>
+	    <li>
+					<% if admin_signed_in? %> 
+						<%= link_to "Sign out", destroy_admin_session_path %> 
+					<% else %> 
+						<%= link_to "sign in", new_admin_session_path %> &nbsp; 
+					<% end %>
+			</li>	
+			</ul>
+</body>
+</html>

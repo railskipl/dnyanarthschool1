@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SchoolApp</title>
+  <%= stylesheet_link_tag    "application" %>
+
+
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+	<!--[if IE 6]>
+		<link rel="stylesheet" type="text/css" href="stylesheets/ie6.css" />
+	<![endif]-->
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="header">
+		<div>
+			<a href="index.html"><%= image_tag "logo.gif",:size => "175x75" %></a>
+			<ul>
+				<li class="current"><a href="/" >Home</a></li>
+				<li><a href='/pages/7' >About us</a></li>
+				<li><a href="/pages/8"> Acdamics</a></li>
+                <li><a href="/pages/9">Facilities</a></li>
+				<li><a href="/pages/11">Careers </a></li>
+                <li><a href="/pages/15">Others</a></li>
+                <li><a href="/contacts"> Contact us</a></li>
+			</ul>
+		</div>
+	</div>
+		
+			
+<%= yield %>
+<div id="footer">
+		<div>
+			<div>
+				<span>Follow us</span>
+				<a href="http://facebook.com/freewebsitetemplates" target="_blank" class="facebook">Facebook</a>
+				<a href="#" class="subscribe">Subscribe</a>
+				<a href="http://twitter.com/fwtemplates" target="_blank" class="twitter">Twitter</a>
+				<a href="http://www.flickr.com/freewebsitetemplates/" target="_blank" class="flicker">Flickr</a>
+			</div>
+			<ul>
+				<li>
+					<a href="#"><%= image_tag"playing-in-grass.gif",:size => "100x100" %></a>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+					<a href="#" class="readmore">Read more</a>
+				</li>
+				<li>
+					<a href="#"><%= image_tag"baby-smiling.gif",:size => "100x100" %></a>
+					<p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud.</p>
+					<a href="#" class="readmore">Read more</a>
+				</li>
+			</ul>
+		</div>
+		<p class="footnote">&copy;2012  Kunal Infotech Pvt Ltd All Rights Reserved 
+.</p>
+	</div>
+</body>
+</html>
